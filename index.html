@@ -2,9 +2,18 @@
 layout: default
 ---
 
+<script src="{{ site.baseurl }}/js/main.js"></script>
 <div class="posts">
+  <p>
+    <b> Tags : </b> | 
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+    {% assign t = tag | first %}
+      <a href="javascript:filter('{{ t }}');" class="tag-link-{{ t }}" >{{ t }}</a> | 
+    {% endfor %}
+  </p>
   {% for post in site.posts %}
-    <article class="post">
+    <article class="post tagRow {{ post.tags | array_to_sentence_string:',' | replace:',',' ' }}">
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 

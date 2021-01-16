@@ -2,6 +2,8 @@
 layout: post
 title: Should we use same docker image for development / QA / production environment?
 excerpt: Briefly describes how should one handle docker images to avoid last-minute surprises in production environment.
+comments: true
+tags: [docker]
 ---
 
 I need to understand what is going on with my application. I have got good test coverage, adopting modern dev-ops practices of CI and CD, test automation, agile …. but every-time I click that trigger for production deployment, the application finds some way of failing me.
